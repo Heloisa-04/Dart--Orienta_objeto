@@ -45,7 +45,6 @@ class TaskRepositoryFromList implements TaskRepository {
     task.add(tarefa);
     
     return tarefa;
-
   }
 
   @override
@@ -57,16 +56,15 @@ class TaskRepositoryFromList implements TaskRepository {
     }
     return null;
   } 
+
+  @override
+  Tasks? update(int id, TaskDTO dto) {
+    
   }
 
   @override
   Tasks? findByName(String name) {
     var tarefa = findByName(name);
-    try {
-     return tasks.firstWhere((tarefa) => task.name == name);
-  } catch (e) {
-    return null; 
-  }
   }
 
   @override
@@ -79,14 +77,7 @@ class TaskRepositoryFromList implements TaskRepository {
    
   }
 
-  @override
-  Tasks? remove(int id) {
-    
-  }
 
-  @override
-  Tasks? update(int id, TaskDTO dto) {
-    
-  }
+
 
 }
